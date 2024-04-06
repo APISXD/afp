@@ -1,0 +1,255 @@
+.iphone-1415-pro-max-1 .image-1 {
+  border-radius: 18px;
+  background: url("../images/image1.png") 50% / cover no-repeat;
+  margin: 0 1px 6px 0;
+  width: 174px;
+  height: 232px;
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+}
+.iphone-1415-pro-max-1 .meet-with-seruni {
+  overflow-wrap: break-word;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  margin-top: 80px;
+  text-align: center;
+}
+.iphone-1415-pro-max-1 .recap {
+  margin-bottom: 30px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+}
+.ketemu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.iphone-1415-pro-max-1 .image-2 {
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  background: url("../images/jktl.png") 50% / cover no-repeat;
+  margin-top: 70px;
+  margin-bottom: 18px;
+  width: 206px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iphone-1415-pro-max-1 .meet-with-jkt-48 {
+  overflow-wrap: break-word;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+}
+.iphone-1415-pro-max-1 .recap-1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+}
+.iphone-1415-pro-max-1 {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  margin: 100px;
+}
+
+/*table*/
+.tabless {
+  float: left;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.inti {
+  left: 200px;
+}
+.trn {
+  left: 320px;
+}
+.gen11 td {
+  border: none;
+}
+.trainees {
+  text-align: center;
+  margin-top: 50px;
+}
+table {
+  position: relative;
+  width: 500px;
+  border-collapse: collapse;
+  font-size: 14px; /* Mengurangi ukuran font */
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  width: 30px;
+  position: relative;
+}
+th {
+  background-color: #e20613;
+  cursor: pointer;
+}
+.mvpd {
+float: right;
+  position: relative;
+  top: 7px;
+  right: -3px;
+}
+
+.text-right {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  position: fixed;
+  top: 600px;
+  bottom: 0px;
+  left: 1350px;
+  padding-left: 50px;
+}
+.btn {
+  padding: 8px 16px;
+  background-color: rgb(255, 75, 75);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: red;
+}
+.mt-2 {
+  margin-top: 8px;
+}
+/* Penambahan warna pada teks status */
+.status-1 {
+  color: red;
+}
+/*untuk sort*/
+.sortr th:hover {
+	content: "\25be";
+}
+.sortr th {
+	cursor: pointer;
+}
+
+.sortr .th-sort-asc::after {
+	content: "\25b4";
+}
+
+.sortr .th-sort-desc::after {
+	content: "\25be";
+}
+
+.sortr .th-sort-asc,
+.sortr .th-sort-desc {
+	background: #e20613;
+}
+/* Media query untuk layar dengan lebar maksimum 600px */
+@media screen and (max-width: 500px) {
+  html, body {
+  overflow-x: hidden; /* Menghilangkan scroll horizontal */
+  overflow-y: scroll; /* Menampilkan scroll vertikal */
+  height: 100%;
+  width: 100%;
+    margin: 0; /* Menghapus margin bawaan browser */
+
+}
+
+  .iphone-1415-pro-max-1 {
+  margin: 0;
+}
+.iphone-1415-pro-max-1 .image-1 {
+margin-top: 10rem;
+    position: relative;
+    top: -1%;
+    left: 0%;
+    border-radius: 38px;
+    transform: scale(1);
+}
+.iphone-1415-pro-max-1 .meet-with-seruni {
+margin-left: 0;
+    width: 150px;
+    margin-top: 0;
+    text-align: center;
+}
+.iphone-1415-pro-max-1 .recap {
+width: 150px;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+.ketemu {
+margin-top: -15px;
+    width: 500px;
+    margin-left: 200px;
+}
+
+.iphone-1415-pro-max-1 .image-2 {
+position: relative;
+    margin-left: 0px;
+    margin-top: -5px;
+}
+.image-2 {
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.image-2:hover {
+  transform: scale(2);
+}
+.image-2:active {
+  transform: scale(0);
+}
+.iphone-1415-pro-max-1 .meet-with-jkt-48 {
+margin-left: 0px;
+    width: 150px;
+    margin-top: -10px;
+}
+.iphone-1415-pro-max-1 .recap-1 {
+width: 100px;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+.meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48, .recap-1 {
+  transform: scale(1);
+
+}
+  /*table foriszxa*/
+.inti {
+  left: 60px;
+}
+.trn {
+  left: 175px;
+}
+  /*table foriszxa*/
+  .tabless {
+    position: absolute;
+    float: left;
+  font-family: "Montserrat", sans-serif;
+    margin-top: 25px;
+margin-right: -99px;
+margin-bottom: -99px;
+margin-left: -99px;
+  }
+  table {
+  width: 200px;
+  font-size: 14px; /* Mengurangi ukuran font */
+  }
+}
