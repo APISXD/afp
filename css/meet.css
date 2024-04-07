@@ -205,8 +205,8 @@ th {
 .mvpd {
 float: right;
   position: relative;
-  top: -1px;
-  right: 60px;
+  top: 5px;
+  right: 5px;
 }
 
 .text-right {
