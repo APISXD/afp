@@ -6407,7 +6407,9 @@ width: 150px;
   left: 60px;
 }
 .trn {
-  left: 175px;
+height: 0px;
+    top: 564px;
+    left: 175px;
 }
   /*table foriszxa*/
   .tabless {
