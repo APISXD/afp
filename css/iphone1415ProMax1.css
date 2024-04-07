@@ -178,7 +178,7 @@ float: right;
   margin: 0;
 }
 .iphone-1415-pro-max-1 .image-1 {
-margin-top: 10rem;
+margin-top: 5rem;
     position: relative;
     top: -1%;
     left: 0%;
@@ -223,9 +223,10 @@ margin-left: 0px;
     margin-top: -10px;
 }
 .iphone-1415-pro-max-1 .recap-1 {
-width: 100px;
-    margin-left: 50px;
+width: 150px;
+    margin-left: 0px;
     margin-top: 0px;
+    text-align: center;
 }
 .meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48, .recap-1 {
   transform: scale(1);
@@ -246,7 +247,7 @@ width: 100px;
     margin-top: 25px;
 margin-right: -99px;
 margin-bottom: -99px;
-margin-left: -99px;
+margin-left: -85px;
   }
   table {
   width: 200px;
