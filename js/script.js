@@ -60,3 +60,29 @@ document.querySelectorAll(".sortr th").forEach((headerCell) => {
     }, 3000); // Adjust the timeout value as needed
   });
 });
+
+  var previewButtons = document.querySelectorAll(".preview-button");
+  previewButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault(); // Mencegah perilaku bawaan dari tautan
+
+      // Ambil URL gambar dari atribut data-src
+      var imageUrl = this.getAttribute("data-src");
+
+      // Tampilkan gambar dalam popup
+      var popupImage = document.getElementById("popup-image");
+      popupImage.src = imageUrl;
+
+      // Tampilkan popup
+      document.getElementById("popup").style.display = "block";
+    });
+  });
+
+  // Tangkap tombol tutup popup
+  document
+    .getElementById("close-popup")
+    .addEventListener("click", function (event) {
+      // Sembunyikan popup saat tombol ditutup
+      document.getElementById("popup").style.display = "none";
+    });
+    
