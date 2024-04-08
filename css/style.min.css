@@ -1,7 +1,3 @@
-@charset "UTF-8";@import url(//fonts.googleapis.com/css?family=Dosis:wght@20);.owl-carousel,.owl-carousel .owl-item,.owl-theme .owl-dots,.owl-theme .owl-nav,.slick-slider,html {
-    -webkit-tap-highlight-color: transparent
-}
-
 .popover,.tooltip,address {
     font-style: normal
 }
@@ -51,12 +47,6 @@ label,output {
     display: inline-block
 }
 
-400;700&display=swap); @import url(//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&subset=japanese);/*!
- * Bootstrap v4.3.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 @import url(https://rsms.me/inter/inter.css);@import url(https://rsms.me/inter/inter.css);@import url(https://rsms.me/inter/inter.css);@import url(https://rsms.me/inter/inter.css);:root {
     --gray-dark: #343a40;
     --blue: #0066ff;
@@ -99,10 +89,12 @@ html {
 }
 
 body {
-    margin: 0;
+
+    margin: 20px 0px 0px 0px;
     font-size: .875rem;
     line-height: 1.8;
-    color: #333
+    color: #333;
+    width: 100%;
 }
 
 [tabindex="-1"]:focus {
@@ -422,7 +414,7 @@ kbd kbd {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    width: 100%
+    width: 100%;
 }
 
 pre {
@@ -1195,7 +1187,7 @@ pre code {
     .col-lg-9 {
         -ms-flex: 0 0 75%;
         flex: 0 0 75%;
-        max-width: 75%
+        max-width: 100%
     }
 
     .col-lg-10 {
@@ -4352,8 +4344,13 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .accordion>.card .card-header {
     margin-bottom: -1px
 }
-
+.svg-inline--fa.fa-arrow-right.fa-w-14 {
+    margin-left: 10px;
+    color: rgba(75, 75, 75, 0.9);
+    width: 10%;
+}
 .breadcrumb {
+   background-image: url(images/meets/pajama.png);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -11237,7 +11234,7 @@ a.text-default {
     padding: 10px;
     margin-top: 0;
     margin-bottom: 20px;
-    background: url(../images/section-title.png);
+    background: url(images/icon/section-title.png);
     text-shadow: #fff 1px 1px 0;
     color: #ff005f
 }
@@ -11623,6 +11620,7 @@ a.text-default {
 }
 
 .nav-breadcrumb {
+    margin-left: 20px;
     padding: 1rem 0;
     clear: both
 }
@@ -11633,10 +11631,11 @@ a.text-default {
 }
 
 .nav-breadcrumb__item {
+    
     display: inline-block;
     font-size: 11px;
     line-height: 2;
-    margin-right: 6px;
+    margin-right: -12px;
     padding-right: 1.125rem;
     position: relative
 }
