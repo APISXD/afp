@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/meet.css" />
+    <link rel="stylesheet" href="css/iphone1415ProMax1.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
   </head>
   <body>
@@ -361,9 +361,18 @@
     </div>
   </body>
   </head>
-  <div class="tabless inti">
-        <h1></h1>
-        <table class="sortr inti">
+  <div class="boxtexts">
+  <div class="arrow arrow-left" onclick="showTable(1)">
+    <i class="fas fa-arrow-left"></i>
+  </div>
+  <div id="textAboveTable" class="text-above-table">Member Inti</div>
+  <div class="arrow arrow-right" onclick="showTable(2)">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+  </div>
+  <div class="table-container">
+  <div class="tables" id="table1">
+        <table class="sortr">
             <thead>
                 <tr>
         <th onclick="sortTable(0)">Nama</th>
@@ -444,9 +453,9 @@
                     <td>0</td>
                 </tr>
             <tr>
-                <td>
-                    <img src="https://i.ibb.co/SVxY9kD/mvplogo.png" class="mvpd" style="width: 20px; height: 19px;">
-                    <strong>Indira PS</strong>
+                <td class="indcont">
+                    <img src="https://i.ibb.co/r0jHnjM/logosa.png" class="mvpd" style="width: 20px; height: 19px;">
+                    <strong>Indira</strong>
                 </td>
                 <td><strong>6</strong></td>
             </tr>
@@ -498,8 +507,8 @@
                 </table>
               </div>
 
-  <div class="tabless trn">
-        <table class="sortr trn">
+  <div class="tables" id="table2">
+        <table class="sortr">
             <thead>
                 <tr>
         <th onclick="sortTable(0)">Nama</th>
