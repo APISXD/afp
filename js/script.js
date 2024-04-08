@@ -61,28 +61,51 @@ document.querySelectorAll(".sortr th").forEach((headerCell) => {
   });
 });
 
-  var previewButtons = document.querySelectorAll(".preview-button");
-  previewButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Mencegah perilaku bawaan dari tautan
+var previewButtons = document.querySelectorAll(".preview-button");
+previewButtons.forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah perilaku bawaan dari tautan
 
-      // Ambil URL gambar dari atribut data-src
-      var imageUrl = this.getAttribute("data-src");
+    // Ambil URL gambar dari atribut data-src
+    var imageUrl = this.getAttribute("data-src");
 
-      // Tampilkan gambar dalam popup
-      var popupImage = document.getElementById("popup-image");
-      popupImage.src = imageUrl;
+    // Tampilkan gambar dalam popup
+    var popupImage = document.getElementById("popup-image");
+    popupImage.src = imageUrl;
 
-      // Tampilkan popup
-      document.getElementById("popup").style.display = "block";
-    });
+    // Tampilkan popup
+    document.getElementById("popup").style.display = "block";
   });
+});
 
-  // Tangkap tombol tutup popup
-  document
-    .getElementById("close-popup")
-    .addEventListener("click", function (event) {
-      // Sembunyikan popup saat tombol ditutup
-      document.getElementById("popup").style.display = "none";
-    });
-    
+// Tangkap tombol tutup popup
+document
+  .getElementById("close-popup")
+  .addEventListener("click", function (event) {
+    // Sembunyikan popup saat tombol ditutup
+    document.getElementById("popup").style.display = "none";
+  });
+// Fungsi untuk menampilkan tabel berdasarkan nomor tabel yang diberikan
+function showTable(tableNumber) {
+  if (tableNumber === 1) {
+    document.getElementById("table1").style.display = "block"; // Menampilkan tabel 1
+    document.getElementById("table2").style.display = "none"; // Menyembunyikan tabel 2
+    document.getElementById("textAboveTable").innerText = "Member Inti"; // Mengubah teks di atas tabel
+  } else if (tableNumber === 2) {
+    document.getElementById("table1").style.display = "none"; // Menyembunyikan tabel 1
+    document.getElementById("table2").style.display = "block"; // Menampilkan tabel 2
+    document.getElementById("textAboveTable").innerText = "Trainee"; // Mengubah teks di atas tabel
+  }
+}
+
+// Menangkap event keyboard
+document.addEventListener('keydown', function(event) {
+  // Jika tombol panah kiri ditekan
+  if (event.key === 'ArrowLeft') {
+    showTable(1); // Memanggil fungsi showTable untuk menampilkan tabel sebelumnya
+  }
+  // Jika tombol panah kanan ditekan
+  else if (event.key === 'ArrowRight') {
+    showTable(2); // Memanggil fungsi showTable untuk menampilkan tabel selanjutnya
+  }
+});
