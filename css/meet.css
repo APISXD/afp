@@ -422,7 +422,7 @@ top: -2px;
 }
 }
 /* Media query untuk layar dengan lebar maksimum 600px */
-@media screen and (min-width: 801px) and (max-width: 1300px) {
+@media screen and (min-width: 801px) and (max-width: 1000px) {
   html,
   body {
     overflow-x: hidden; /* Menghilangkan scroll horizontal */
