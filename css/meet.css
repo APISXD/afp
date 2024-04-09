@@ -357,7 +357,7 @@ top: -2px;
     margin: 0;
   }
 .meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48,.recap-1 {
- transform: translateY(480px);
+ transform: translateY(550px);
 }
   }
   /*table foriszxa*/
@@ -372,7 +372,9 @@ top: -2px;
   #textAboveTable {
     font-size: small;
   }
-
+.image-2:hover {
+  transform: translateY(0px);
+}
 .arrow-right {
   margin: 0px 150px 0px 0px;
   left: -650px;
@@ -380,6 +382,9 @@ top: -2px;
 .arrow-left {
   margin: 0px 0px 0px 150px;
   left: 650px;
+}
+.boxtexts {
+  margin-top: 350px;
 }
 /* Media query untuk layar dengan lebar maksimum 600px */
 @media screen and (min-width: 501px) and (max-width: 1300px) {
