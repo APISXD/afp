@@ -340,7 +340,7 @@ td {
 
 
 /* Media query untuk layar dengan lebar maksimum 600px */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (hover: none) {
   html,
   body {
     overflow-x: hidden; /* Menghilangkan scroll horizontal */
@@ -357,7 +357,7 @@ top: -2px;
     margin: 0;
   }
 .meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48,.recap-1 {
- transform: translateY(550px);
+ transform: translateY(250px);
 }
   }
   /*table foriszxa*/
@@ -373,7 +373,7 @@ top: -2px;
     font-size: small;
   }
 .image-2:hover {
-  transform: translateY(0px);
+  transform: translateY(100px);
 }
 .arrow-right {
   margin: 0px 150px 0px 0px;
@@ -387,7 +387,7 @@ top: -2px;
   margin-top: 350px;
 }
 /* Media query untuk layar dengan lebar maksimum 600px */
-@media screen and (min-width: 501px) and (max-width: 1300px) {
+@media screen and (min-width: 501px) and (max-width: 800px) {
   html,
   body {
     overflow-x: hidden; /* Menghilangkan scroll horizontal */
@@ -409,7 +409,42 @@ top: -2px;
     font-size: small;
   }
 .meet-with-seruni, .meet-with-jkt-48, .recap, .recap-1, .image-2, .ketemu{
- transform: translateY(550px);
+ transform: translateY(250px);
+}
+
+.arrow-right {
+  margin: 0px 150px 0px 0px;
+  left: -650px;
+}
+.arrow-left {
+  margin: 0px 0px 0px 150px;
+  left: 650px;
+}
+}
+/* Media query untuk layar dengan lebar maksimum 600px */
+@media screen and (min-width: 801px) and (max-width: 1300px) {
+  html,
+  body {
+    overflow-x: hidden; /* Menghilangkan scroll horizontal */
+    overflow-y: scroll; /* Menampilkan scroll vertikal */
+    height: 100%;
+    width: 100%;
+    margin: 0; /* Menghapus margin bawaan browser */
+  }
+
+  .tables {
+    width: 700px;
+    display: none; /* awalnya sembunyikan */
+  }
+  table {
+    width: 100%;
+    font-size: 14px; /* Mengurangi ukuran font */
+  }
+  #textAboveTable {
+    font-size: small;
+  }
+.meet-with-seruni, .meet-with-jkt-48, .recap, .recap-1, .image-2, .ketemu{
+ transform: translateY(230px);
 }
 
 .arrow-right {
