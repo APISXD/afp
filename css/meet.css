@@ -101,6 +101,9 @@ transform: translateY(-20px);
 .meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48,.recap-1 {
   position: absolute;
 }
+.meet-with-seruni, .recap, .ketemu, .image-2, .meet-with-jkt-48,.recap-1 {
+ transform: translateY(-40px);
+}
 #preview-container {
   display: none;
   width: 500px;
@@ -340,7 +343,7 @@ td {
 
 
 /* Media query untuk layar dengan lebar maksimum 600px */
-@media screen and (max-width: 500px) and (hover: none) {
+@media screen and (max-width: 500px) {
   html,
   body {
     overflow-x: hidden; /* Menghilangkan scroll horizontal */
