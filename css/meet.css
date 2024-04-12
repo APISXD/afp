@@ -250,24 +250,26 @@ td {
 .text-right {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 12px;
+font-size: 12px;
   position: fixed;
-  top: 0px;
+  top: 10px;
   bottom: 107px;
   left: 0px;
+  z-index: 9999;
 }
 .btn {
   padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.8);
   color: rgb(0, 0, 0);
   border: none;
-  border-radius: 4px;
+  border-radius: 7px;
 }
 .btn:hover {
   background-color: rgb(47, 45, 45);
 }
 .mt-2 {
   margin-top: 8px;
+  text-decoration: none;
 }
 /* Penambahan warna pada teks status */
 .status-1 {
@@ -319,7 +321,6 @@ a:visited {
   margin: 0px 0px 0px 600px;
   left: 700px;
 }
-
 
 
 /*MEDIA*/
