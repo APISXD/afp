@@ -130,3 +130,12 @@ document.addEventListener('keydown', function(event) {
            });
          }
        }
+
+// Ambil semua elemen <td> yang berisi angka di dalam tabel dengan id "table2"
+var cells = document.querySelectorAll('#table2 tbody td:nth-child(2)');
+
+// Loop melalui setiap elemen <td> dan tambahkan 1 ke nilainya
+cells.forEach(function(cell) {
+    var currentValue = parseInt(cell.textContent);
+    cell.textContent = currentValue + 1;
+});
