@@ -685,7 +685,12 @@ function updateCountdown(elementId, endDateStr) {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById(elementId).innerHTML = 
-        elementId.split('-')[0] + ' (Punishment) ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+        `<span style="color: black;">${elementId.split('-')[0]}</span> ` +
+        `<span style="color: red;">(Punishment)</span> ` +
+        `<span style="color: #1E90FF;">${days}d</span> ` +
+        `<span style="color: #32CD32;">${hours}h</span> ` +
+        `<span style="color: #FF8C00;">${minutes}m</span> ` +
+        `<span style="color: #B22222;">${seconds}s</span>`;
 }
 
 const countdownIntervals = {
