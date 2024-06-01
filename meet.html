@@ -667,46 +667,42 @@
     <script
             src="js/script.js">
     </script>
-    <script>
-    function updateCountdown(elementId, endDateStr) {
-        const endDate = new Date(endDateStr).getTime();
-        const now = new Date().getTime();
-        const distance = endDate - now;
+<script>
+function updateCountdown(elementId, endDateStr) {
+    const endDate = new Date(endDateStr).getTime();
+    const now = new Date().getTime();
+    const distance = endDate - now;
 
-        if (distance < 0) {
-            document.getElementById(elementId).innerHTML = elementId.split('-')[0] + ' EXPIRED';
-            clearInterval(countdownIntervals[elementId]);
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById('keli-countdown').innerHTML = 
-        'Keli (Punishment) ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
-        document.getElementById('manda-countdown').innerHTML = 
-        'Manda (Punishment) ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
-        document.getElementById('indira-countdown').innerHTML = 
-        'Indira (Punishment) ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+    if (distance < 0) {
+        document.getElementById(elementId).innerHTML = elementId.split('-')[0] + ' EXPIRED';
+        clearInterval(countdownIntervals[elementId]);
+        return;
     }
 
-    const countdownIntervals = {
-        'keli-countdown': null,
-        'manda-countdown': null,
-        'indira-countdown': null,
-    };
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    function startCountdowns() {
-        countdownIntervals['keli-countdown'] = setInterval(() => updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
-        countdownIntervals['manda-countdown'] = setInterval(() => updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
-        countdownIntervals['indira-countdown'] = setInterval(() => updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
-        updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
-        updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
-        updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
-    }
+    document.getElementById(elementId).innerHTML = 
+        elementId.split('-')[0] + ' (Punishment) ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+}
 
-    startCountdowns();
+const countdownIntervals = {
+    'keli-countdown': null,
+    'manda-countdown': null,
+    'indira-countdown': null,
+};
+
+function startCountdowns() {
+    countdownIntervals['keli-countdown'] = setInterval(() => updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
+    countdownIntervals['manda-countdown'] = setInterval(() => updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
+    countdownIntervals['indira-countdown'] = setInterval(() => updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
+    updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
+    updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
+    updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
+}
+
+startCountdowns();
 </script>
   </body>
