@@ -414,7 +414,7 @@
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td id="manda-countdown" class="name-with-countdown">Manda</td>
+                    <td id="Manda-countdown" class="name-with-countdown">Manda</td>
                     <td>3</td>
                 </tr>
                 <tr>
@@ -430,7 +430,7 @@
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td id="keli-countdown" class="name-with-countdown">Keli</td>
+                    <td id="Keli-countdown" class="name-with-countdown">Keli</td>
                     <td>4</td>
                 </tr>
                 <tr>
@@ -482,7 +482,7 @@
                     <td>1</td>
                 </tr>
             <tr>
-                <td id="indira-countdown" class="name-with-countdown" class="indcont">
+                <td id="Indira-countdown" class="name-with-countdown" class="indcont">
                     <!-- <img src="https://i.ibb.co/r0jHnjM/logosa.png" class="mvpd" style="width: 20px; height: 19px;"> -->
                     <strong>Indira</strong>
                 </td>
@@ -689,18 +689,18 @@ function updateCountdown(elementId, endDateStr) {
 }
 
 const countdownIntervals = {
-    'keli-countdown': null,
-    'manda-countdown': null,
-    'indira-countdown': null,
+    'Keli-countdown': null,
+    'Manda-countdown': null,
+    'Indira-countdown': null,
 };
 
 function startCountdowns() {
-    countdownIntervals['keli-countdown'] = setInterval(() => updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
-    countdownIntervals['manda-countdown'] = setInterval(() => updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
-    countdownIntervals['indira-countdown'] = setInterval(() => updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
-    updateCountdown('keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
-    updateCountdown('manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
-    updateCountdown('indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
+    countdownIntervals['Keli-countdown'] = setInterval(() => updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
+    countdownIntervals['Manda-countdown'] = setInterval(() => updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
+    countdownIntervals['Indira-countdown'] = setInterval(() => updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
+    updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
+    updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
+    updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
 }
 
 startCountdowns();
