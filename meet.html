@@ -319,7 +319,7 @@
     </div>
 </div>
 <div class="texts1">   
-<!-- <div class="slidecont">
+<div class="slidecont">
         <div class="slides">
 
         <div class="slide" style="background-image: url('https://pbs.twimg.com/media/GAGPWUaakAAWrIt?format=jpg&name=large');">
@@ -343,9 +343,9 @@
             <h3>Indira Gaming</h3>
         </div>
         </div>
-</div> -->
+</div>
  
-      <!-- <div class="meet-with-seruni">
+      <div class="meet-with-seruni">
       Meet WIth Seruni
       </div>
       <div class="recap">
@@ -366,7 +366,9 @@
   <li><a href="https://twitter.com/adityfaiz/status/1749036117004046360/photo/1"> Teater Pajama Drive </a> - 21 Jan 24</li>
   <a title="Lihat Preview" class="preview-button nam" data-src="images/meets/pajama.png"><i class="fas fa-eye"></i>
   <li><a href="https://twitter.com/adityfaiz/status/1755155793417212106/video/1"> Harmoni Pemilu </a> - 7 Feb 24</li>
-</ul> -->
+</ul>
+
+
 <div id="popup">
   <div id="popup-content">
     <img id="popup-image" class="image-preview" src="" alt="Preview Image">
@@ -482,9 +484,9 @@
                     <td>1</td>
                 </tr>
             <tr>
-                <td id="Indira-countdown" class="name-with-countdown" class="indcont">
+                <td>
                     <!-- <img src="https://i.ibb.co/r0jHnjM/logosa.png" class="mvpd" style="width: 20px; height: 19px;"> -->
-                    <strong>Indira</strong>
+                    <strong>Indira | Welcome back 🤍</strong>
                 </td>
                 <td><strong>6</strong></td>
             </tr>
@@ -553,10 +555,10 @@
                     <td>Delynn</td>
                     <td>2</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Shasa</td>
                     <td>1</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Alya</td>
                     <td>3</td>
@@ -696,16 +698,16 @@ function updateCountdown(elementId, endDateStr) {
 const countdownIntervals = {
     'Keli-countdown': null,
     'Manda-countdown': null,
-    'Indira-countdown': null,
+    // 'Indira-countdown': null,
 };
 
 function startCountdowns() {
     countdownIntervals['Keli-countdown'] = setInterval(() => updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
     countdownIntervals['Manda-countdown'] = setInterval(() => updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
-    countdownIntervals['Indira-countdown'] = setInterval(() => updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
+    // countdownIntervals['Indira-countdown'] = setInterval(() => updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
     updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
     updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
-    updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
+    // updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
 }
 
 startCountdowns();
