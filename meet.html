@@ -390,7 +390,8 @@
     <div class="apdet">
       <p>*Last updated 31 May 2024</p>
       <p>*Last updated 30 Nov 2024</p>
-      </div>
+      <p>*Last updated 6 Des 2024</p>
+    </div>
 </div>
   <div class="boxtexts">
   <div class="arrow arrow-left" onclick="showTable(1)">
@@ -485,7 +486,7 @@
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td>Flora</td>
+                    <td id="Flora-countdown" class="name-with-countdown">Flora</td>
                     <td>2</td>
                 </tr>
                 <tr>
@@ -590,11 +591,11 @@
             <tbody>
                 <tr>
                     <td>Aralie</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                 <tr>
                     <td>Delynn</td>
-                    <td>4</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>Virgi</td>
@@ -618,11 +619,11 @@
                 </tr>
                 <tr>
                     <td>Erine</td>
-                    <td>4</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>Fritzy</td>
-                    <td>4</td>
+                    <td>5</td>
                 </tr>
                                 <tr>
                     <td>Giaa</td>
@@ -630,7 +631,7 @@
                 </tr>
                 <tr>
                     <td>Lily</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                                 <tr>
                     <td>Maira</td>
@@ -642,7 +643,7 @@
                 </tr>
                 <tr>
                     <td>Trisha</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                                 <tr>
                     <td>Jemima</td>
@@ -654,11 +655,11 @@
                 </tr> -->
                 <tr>
                     <td>Moreen</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                 <tr>
                     <td>Levi</td>
-                    <td>3</td>
+                    <td>5</td>
                 </tr>
                                 <tr>
                     <td>Mikaela</td>
@@ -670,7 +671,7 @@
                 </tr>
                 <tr>
                     <td>Nachia</td>
-                    <td>4</td>
+                    <td>5</td>
                 </tr>
                                 <tr>
                     <td>Intan</td>
@@ -682,15 +683,15 @@
                 </tr>
                 <tr>
                     <td>Regie</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                 <tr>
                     <td>Ribka</td>
-                    <td>3</td>
+                    <td>4</td>
                 </tr>
                 <tr>
                     <td>Nala</td>
-                    <td>4</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>Kimmy</td>
@@ -713,7 +714,7 @@ function updateCountdown(elementId, endDateStr) {
     const distance = endDate - now;
 
     if (distance < 0) {
-        document.getElementById(elementId).innerHTML = elementId.split('-')[0] + ' EXPIRED';
+        document.getElementById(elementId).innerHTML = elementId.split('-')[0] + ' None';
         clearInterval(countdownIntervals[elementId]);
         return;
     }
@@ -734,17 +735,41 @@ function updateCountdown(elementId, endDateStr) {
 
 const countdownIntervals = {
     'Keli-countdown': null,
-    'Manda-countdown': null,
+    'Flora-countdown': null,
     // 'Indira-countdown': null,
 };
 
 function startCountdowns() {
-    countdownIntervals['Keli-countdown'] = setInterval(() => updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'), 1000);
-    countdownIntervals['Manda-countdown'] = setInterval(() => updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'), 1000);
-    // countdownIntervals['Indira-countdown'] = setInterval(() => updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'), 1000);
-    updateCountdown('Keli-countdown', '2024-08-16T00:00:00+07:00'); // initial call to display immediately
-    updateCountdown('Manda-countdown', '2024-07-25T00:00:00+07:00'); // initial call to display immediately
-    // updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00'); // initial call to display immediately
+countdownIntervals['Keli-countdown'] = setInterval(() => updateCountdown('Keli-countdown', 'unknown', 'Keli'), 1000);
+countdownIntervals['Flora-countdown'] = setInterval(() => updateCountdown('Flora-countdown', 'unknown', 'Flora'), 1000);
+// countdownIntervals['Indira-countdown'] = setInterval(() => updateCountdown('Indira-countdown', '2024-07-11T00:00:00+07:00', 'Indira'), 1000);
+updateCountdown('Keli-countdown', 'unknown', 'Keli'); // initial call to display immediately
+updateCountdown('Flora-countdown', 'unknown', 'Flora'); // initial call to display immediately
+
+function updateCountdown(elementId, targetDate, name) {
+    const countdownElement = document.getElementById(elementId);
+    if (!targetDate || targetDate === 'unknown') {
+        countdownElement.textContent = `${name}: Tidak Diketahui`; // Menampilkan nama dan status waktu
+        return;
+    }
+
+    const now = new Date();
+    const target = new Date(targetDate);
+    const difference = target - now;
+
+    if (difference <= 0) {
+        countdownElement.textContent = `${name}: Waktu Habis`;
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    countdownElement.textContent = `${name}: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
 }
 
 startCountdowns();
