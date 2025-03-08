@@ -31,6 +31,7 @@
             max-width: 100%;
             height: auto;
             margin: 20px;
+            display: block;
         }
         @media (max-width: 767.98px) {
             .mobile-spacing {
@@ -94,6 +95,21 @@
             text-align: center;
             margin-bottom: 20px;
         }
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+        justify-items: center;
+}
+.image-grid img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 3px #ff3f81;
+}
+
     </style>
 </head>
 <body>
@@ -103,11 +119,14 @@
             <div class="col-12 col-sm-10 col-md-8 col-lg-6">
                 <div class="card-body">
         <h5 class="card-title text-center poppins-font">JKT48 Wrapped (Faiz)</h5><br>
-        <center>
-            <img src="images/indira_seruni.jpg" width="50%" class="img-fluid rounded-image"><br>
-            <img src="images/shabilqis_naila.jpg" width="50%" class="img-fluid rounded-image"><br>
-        </center><br>
-         <p class="poppins-font"><b>Oshi:</b> 1. Indira Seruni - 2. Shabilqis Naila</p>
+<div class="image-grid">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv0tRF0CRp3fFVoEOS6mEa6Vw1Y2YHtJURBFqGPnBMDP29Mn7CKmpf-8OD_ZkhxwopjNg&usqp=CAU" class="img-fluid rounded-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV1yP7FdOAcXKXSRqZB6jLfrCil7T9HCs7bfS4UVJ4rARlp4lfk48C-P85cpAmOAlDCCE&usqp=CAU" class="img-fluid rounded-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2KKJdnQyXQlme2E-WmWOwF_mlo-Dwl2GXDg&s" class="img-fluid rounded-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv22otfi2rhHjpjx-LK6S_PrpkRHe5Jgdxk9R8KAGbgmC7m5ZPIsl7d8dhHhhdlV8D_iA&usqp=CAU" class="img-fluid rounded-image">
+</div>
+
+         <p class="poppins-font"><b>Oshi:</b> 1. Indira Seruni - 2. Shabilqis Naila - 3. Catherine Valencia - 4. Nur Intan</p>
         <div class="row">
             <div class="col-md-6">
                 <b>• Theater</b><br>
