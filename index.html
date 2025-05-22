@@ -2,25 +2,17 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-QF6QHSQGFP");
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link
-      rel="shortcut icon"
-      type="x-icon"
-      href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Rubik_cube.png/900px-Rubik_cube.png"
-    />
+    <link rel="shortcut icon" type="x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Rubik_cube.png/900px-Rubik_cube.png" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="pragma" content="no-cache" />
@@ -29,57 +21,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AFaZz</title>
-        <style>
-      .countdown-container {
-        background: linear-gradient(158deg, #134370 0%, #1c6cc0 100%);
-        background-image: linear-gradient(158deg, #134370 0%, #1c6cc0 100%);
-        padding: 20px;
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" />
+    <!-- Core theme CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .snpmb-container {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 30px;
+        color: white;
+        background: linear-gradient(to right, #63c5da, #4a90e2);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+
+      .snpmb-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .snpmb-logo img {
+        height: 80px;
+      }
+
+      .snpmb-logo-text {
+        text-align: center;
+        color: white;
+      }
+
+      .snpmb-logo-text h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+        color: white;
+      }
+
+      .snpmb-logo-text p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .snpmb-h2 {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+      }
+
+      .snpmb-countdown {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 20px;
-        border-radius: 8px 8px 0 0;
-        margin: 0px auto;
-        margin-top: 20px;
-        max-width: 600px;
-      }
-      .time-box {
-        text-align: center;
-        font-size: 20px;
+        gap: 40px;
         color: white;
-        font-weight: bold;
       }
-      .time-box span {
-        display: block;
+
+      .snpmb-countdown div {
+        font-weight: 700;
+      }
+
+      .snpmb-countdown .number {
         font-size: 40px;
       }
-      .kapansh {
-        background: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
+
+      .snpmb-countdown .label {
         font-size: 16px;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 0 0 8px 8px;
-        max-width: 600px;
-        margin: auto;
-        margin-bottom: 20px;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+
+      .snpmb-footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        opacity: 0.9;
       }
     </style>
-    <!-- Font Awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
-    />
-    <!-- Core theme CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
@@ -90,178 +112,96 @@
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
           <div class="dropdown mb-5">
-            <div tabindex="0" role="button" class="m-1"
-            style="margin-right: 21px; margin-top: 21px;"
-            >
+            <div tabindex="0" role="button" class="m-1" style="margin-right: 21px; margin-top: 21px;">
               Tema
-              <svg
-                width="12px"
-                height="12px"
-                class="h-2 w-2 fill-current opacity-60 inline-block"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 2048 2048"
-              >
-                <path
-                  d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
-                ></path>
+              <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
               </svg>
             </div>
-            <ul
-              tabindex="0"
-              class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
-              style="right: 0px; padding: 0;width: 80px;height: 100px;left: -100;left: -50;left: -10;left: -5;"
-            >
+            <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52" style="right: 0px; padding: 0;width: 80px;height: 100px;left: -100;left: -50;left: -10;left: -5;">
               <li>
-                <input
-                  type="radio"
-                  name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                  aria-label="Gelap"
-                  value="dark"
-                />
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Gelap" value="dark" />
               </li>
               <li>
-                <input
-                  type="radio"
-                  name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                  aria-label="Terang"
-                  value="light"
-                />
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Terang" value="light" />
               </li>
               <li>
-                <input
-                  type="radio"
-                  name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                  aria-label="Malam"
-                  value="night"
-                />
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Malam" value="night" />
               </li>
               <li>
-                <input
-                  type="radio"
-                  name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                  aria-label="Senja"
-                  value="sunset"
-                />
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Senja" value="sunset" />
               </li>
             </ul>
           </div>
         </ul>
       </div>
     </div>
-        <div class="countdown-container">
-      <div class="time-box"><span id="days">00</span> Hari</div>
-      <div class="time-box">:</div>
-      <div class="time-box"><span id="hours">00</span> Jam</div>
-      <div class="time-box">:</div>
-      <div class="time-box"><span id="minutes">00</span> Menit</div>
-      <div class="time-box">:</div>
-      <div class="time-box"><span id="seconds">00</span> Detik</div>
+    <div class="snpmb-container">
+      <div class="snpmb-logo">
+        <img src="https://snbt.utbkcak.com/wp-content/uploads/2025/03/logo-snpmb-2025.png" alt="Logo">
+      </div>
+
+      <h2 class="snpmb-h2">PENGUMUMAN HASIL SELEKSI SNBT SNPMB 2025</h2>
+
+      <div class="snpmb-countdown" id="countdown">
+        <div>
+          <div class="number" id="days">05</div>
+          <div class="label">Hari</div>
+        </div>
+        <div>
+          <div class="number" id="hours">21</div>
+          <div class="label">Jam</div>
+        </div>
+        <div>
+          <div class="number" id="minutes">19</div>
+          <div class="label">Menit</div>
+        </div>
+        <div>
+          <div class="number" id="seconds">49</div>
+          <div class="label">Detik</div>
+        </div>
+      </div>
+
+      <div class="snpmb-footer">
+        afp
+      </div>
     </div>
-    <div class="kapansh">
-      <a href="https://pengumuman-snbp-snpmb.bppp.kemdikbud.go.id/"
-        >HASIL SELEKSI SNBP 2025 -</a
-      >
-      DIBUKA TANGGAL 18 MARET 2025 15:00 WIB
-    </div>
+
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content text-center">
         <div class="max-w-md">
           <div class="avatar">
-            <div
-              class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
-            >
+            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img src="images/github2.jpg" />
             </div>
           </div>
-                    <h1 class="text-5xl font-bold">&nbsp;</h1>
+          <h1 class="text-5xl font-bold">&nbsp;</h1>
           <h1 class="text-5xl font-bold">AFP</h1>
           <h1 class="text-5xl font-bold">&nbsp;</h1>
-          <a
-            href="about.html"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fa-sharp fa-solid fa-globe">&nbsp;</i>About</a
-          >
-          <a
-            href="https://afazz.vercel.app/"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fa-sharp fa-solid fa-blog">&nbsp;</i>Blog</a
-          >
-         <a
-            href="games.html"
-            target="_blank"
-            class ="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-steam">&nbsp;</i>Web Project</a
-          >
-          <a
-            href="https://www.canva.com/design/DAGbxhkJ5l4/FcfFx46kkaYu-curqBM81A/edit?utm_content=DAGbxhkJ5l4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            target="_blank"
-            class ="btn btn-wide btn-neutral mb-2"
-            ><i class="fa-sharp fa-solid fa-globe">&nbsp;</i>Portofolio Rebranding UMKM</a
-          >
+          
+          <!-- SNPMB Countdown Section -->
+          
+          <h1 class="text-5xl font-bold">&nbsp;</h1>
+          
+          <a href="about.html" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fa-sharp fa-solid fa-globe">&nbsp;</i>About</a>
+          <a href="https://afazz.vercel.app/" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fa-sharp fa-solid fa-blog">&nbsp;</i>Blog</a>
+          <a href="games.html" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-steam">&nbsp;</i>Web Project</a>
+          <a href="https://www.canva.com/design/DAGbxhkJ5l4/FcfFx46kkaYu-curqBM81A/edit?utm_content=DAGbxhkJ5l4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fa-sharp fa-solid fa-globe">&nbsp;</i>Portofolio Rebranding UMKM</a>
+          
           <h5 class="text-xl font-bold">&nbsp;</h5>
           <h5 class="text-xl font-bold mb-2">Sosial Media</h5>
-          <a
-            href="https://github.com/apisxd"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-github">&nbsp;</i>Github</a
-          >
-          <a
-            href="https://twitter.com/adityfaiz"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-twitter">&nbsp;</i>Twitter</a
-          >
-          <a
-            href="https://instagram.com/adityfaizp"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-instagram">&nbsp;</i>Instagram</a
-          >
-          <a
-            href="https://tiktok.com/diggerspade_"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-tiktok">&nbsp;</i>Tiktok</a
-          >
-          <a
-            href="https://tiktok.com/afazz_gd"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-tiktok">&nbsp;</i>Tiktok Tutor</a
-          >
-          <a
-            href="https://id.pinterest.com/adityfaizp/_created/"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-pinterest">&nbsp;</i>Pinterest</a
-          >
-          <a
-            href="https://www.youtube.com/@afazzgd"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-youtube">&nbsp;</i>YouTube</a
-          >
+          <a href="https://github.com/apisxd" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-github">&nbsp;</i>Github</a>
+          <a href="https://twitter.com/adityfaiz" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-twitter">&nbsp;</i>Twitter</a>
+          <a href="https://instagram.com/adityfaizp" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-instagram">&nbsp;</i>Instagram</a>
+          <a href="https://tiktok.com/diggerspade_" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-tiktok">&nbsp;</i>Tiktok</a>
+          <a href="https://tiktok.com/afazz_gd" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-tiktok">&nbsp;</i>Tiktok Tutor</a>
+          <a href="https://id.pinterest.com/adityfaizp/_created/" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-pinterest">&nbsp;</i>Pinterest</a>
+          <a href="https://www.youtube.com/@afazzgd" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-youtube">&nbsp;</i>YouTube</a>
+          
           <h5 class="text-xl font-bold">&nbsp;</h5>
           <h5 class="text-xl font-bold mb-2">More</h5>
-          <a
-            href="wrapped.html"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-book">&nbsp;</i>JKT48 Wrapped</a
-          >
-          <a
-            href="meet.html"
-            target="_blank"
-            class="btn btn-wide btn-neutral mb-2"
-            ><i class="fab fa-github-alt">&nbsp;</i>Meet with JKT48</a
-          >
+          <a href="wrapped.html" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-book">&nbsp;</i>JKT48 Wrapped</a>
+          <a href="meet.html" target="_blank" class="btn btn-wide btn-neutral mb-2"><i class="fab fa-github-alt">&nbsp;</i>Meet with JKT48</a>
 
           <h1 class="text-5xl font-bold">&nbsp;</h1>
           <footer>
@@ -274,46 +214,32 @@
       </div>
     </div>
     <audio autoplay loop class="fixed bottom-0 left-0 w-full">
-      <source
-        src="audio/potongts.mp3"
-        type="audio/mpeg"
-      />
+      <source src="audio/potongts.mp3" type="audio/mpeg" />
       Maaf, browser Anda tidak mendukung pemutaran audio.
     </audio>
 
-        <script>
-      function updateCountdown() {
-        const targetDate = new Date("May 28, 2025 15:00:00").getTime();
+    <script>
+      const countdownDate = new Date("May 28, 2025 15:00:00").getTime();
+
+      const x = setInterval(() => {
         const now = new Date().getTime();
-        const diff = targetDate - now;
+        const distance = countdownDate - now;
 
-        if (diff > 0) {
-          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          document.getElementById("days").innerText = days
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("hours").innerText = hours
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("minutes").innerText = minutes
-            .toString()
-            .padStart(2, "0");
-          document.getElementById("seconds").innerText = seconds
-            .toString()
-            .padStart(2, "0");
-        } else {
-          document.querySelector(".countdown-container").innerHTML =
-            "<h2>Hasil SNBP Telah Dibuka!</h2>";
+        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "Pengumuman Telah Dimulai!";
         }
-      }
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
+      }, 1000);
     </script>
   </body>
 </html>
